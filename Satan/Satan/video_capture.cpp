@@ -4,7 +4,8 @@ namespace ice
 {
 	VideoCapture::VideoCapture(const char * fileName)
 	{
-		work_well_ = (ffmpeg_decoder_init(pdat_, fileName) == 2);
+		pdat_ = new DecoderData;
+		work_well_ = (ffmpeg_decoder_init(pdat_, fileName) == 0);
 
 	}
 
@@ -17,12 +18,7 @@ namespace ice
 
 	void VideoCapture::Open(const char * fileName)
 	{
-		if (pdat_)
-		{
-			ffmpeg_decoder_free(pdat_);
-			delete pdat_;
-		}
-		work_well_ = (ffmpeg_decoder_init(pdat_, fileName) == 2);
+		work_well_ = (ffmpeg_decoder_init(pdat_, fileName) == 0);
 	}
 
 	VideoCapture& VideoCapture::operator >> (cv::Mat & frame)

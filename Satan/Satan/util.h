@@ -16,6 +16,11 @@
 #include <vector>     
 #include <algorithm>
 #include <assert.h>
+#include <caffe/caffe.hpp>
+#include <iomanip>
+#include <iosfwd>
+#include <memory>
+#include <utility>
 
 extern "C"
 {
@@ -27,6 +32,8 @@ extern "C"
 
 namespace ice
 {
+	class KernelAlg;
+
 	/************************************************************************/
 	/* 
 	filepath	:	read file names from 
@@ -34,6 +41,9 @@ namespace ice
 	*/
 	/************************************************************************/
 	int  getFileList(std::string filepath, std::vector<std::string> &videoList);
-
+	/************************************************************************/
+	/* parse or paramter                                                    */
+	/************************************************************************/
+	void parseOrDie(const char* configPath, KernelAlg& alg, std::vector<std::string>& file_list);
 }
 #endif // __UTIL_H__

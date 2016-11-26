@@ -24,6 +24,21 @@
     <ClCompile Include="video_capture.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ssd_detector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel_alg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fhog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kcftracker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="multi_tracker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="util.h">
@@ -36,6 +51,36 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="singleton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ssd_detector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel_alg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="labdata.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kcftracker.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fhog.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ffttools.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="tracker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="recttools.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="multi_tracker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="object_info.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

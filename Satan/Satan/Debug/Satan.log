@@ -1,0 +1,43 @@
+﻿  video_capture.cpp
+i:\vs_projects\git_respository\satan\satan\satan\util.h(19): fatal error C1083: 无法打开包括文件: “caffe/caffe.hpp”: No such file or directory
+  util.cpp
+i:\vs_projects\git_respository\satan\satan\satan\util.h(19): fatal error C1083: 无法打开包括文件: “caffe/caffe.hpp”: No such file or directory
+  ssd_detector.cpp
+i:\vs_projects\git_respository\satan\satan\satan\util.h(19): fatal error C1083: 无法打开包括文件: “caffe/caffe.hpp”: No such file or directory
+  multi_tracker.cpp
+i:\vs_projects\git_respository\satan\satan\satan\util.h(19): fatal error C1083: 无法打开包括文件: “caffe/caffe.hpp”: No such file or directory
+  main.cpp
+i:\vs_projects\git_respository\satan\satan\satan\util.h(19): fatal error C1083: 无法打开包括文件: “caffe/caffe.hpp”: No such file or directory
+  kernel_alg.cpp
+i:\vs_projects\git_respository\satan\satan\satan\util.h(19): fatal error C1083: 无法打开包括文件: “caffe/caffe.hpp”: No such file or directory
+  kcftracker.cpp
+i:\vs_projects\git_respository\satan\satan\satan\labdata.hpp(17): warning C4838: 从“double”转换到“float”需要收缩转换
+i:\vs_projects\git_respository\satan\satan\satan\labdata.hpp(17): warning C4305: “初始化”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(95): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(103): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(104): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(112): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(113): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(126): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(127): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(142): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(143): warning C4305: “=”: 从“double”到“float”截断
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(177): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(178): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(216): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(217): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(329): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(350): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(351): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(359): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(360): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(390): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(391): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(394): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(395): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(454): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(488): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(490): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+i:\vs_projects\git_respository\satan\satan\satan\kcftracker.cpp(518): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+  fhog.cpp
+  正在生成代码...

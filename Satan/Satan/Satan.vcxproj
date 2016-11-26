@@ -143,12 +143,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="fhog.cpp" />
+    <ClCompile Include="kcftracker.cpp" />
+    <ClCompile Include="kernel_alg.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="multi_tracker.cpp" />
+    <ClCompile Include="ssd_detector.cpp" />
     <ClCompile Include="util.cpp" />
     <ClCompile Include="video_capture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ffttools.hpp" />
+    <ClInclude Include="fhog.hpp" />
+    <ClInclude Include="kcftracker.hpp" />
+    <ClInclude Include="kernel_alg.h" />
+    <ClInclude Include="labdata.hpp" />
+    <ClInclude Include="multi_tracker.h" />
+    <ClInclude Include="object_info.h" />
+    <ClInclude Include="recttools.hpp" />
     <ClInclude Include="singleton.h" />
+    <ClInclude Include="ssd_detector.h" />
+    <ClInclude Include="tracker.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="video_capture.h" />
     <ClInclude Include="watch_time.h" />

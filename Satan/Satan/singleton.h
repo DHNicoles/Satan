@@ -2,20 +2,25 @@
 #define __SINGLETON_H__
 #include "util.h"  
 #define NULL 0
-namespace ice {
+namespace ice
+{
 	template<typename T>
-	class Singleton {
+	class Singleton
+	{
 	public:
-		Singleton() {
+		Singleton()
+		{
 			assert(!ms_pSingleton);
 			ms_pSingleton = static_cast<T*>(this);
 		}
-		~Singleton() {
+		~Singleton()
+		{
 			assert(ms_pSingleton);
 			ms_pSingleton = NULL;
 		}
 
-		static T* Instance() {
+		static T* Instance()
+		{
 			return ms_pSingleton;
 		}
 
