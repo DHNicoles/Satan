@@ -21,7 +21,8 @@
 #include <iosfwd>
 #include <memory>
 #include <utility>
-
+#include <glog/logging.h>
+#include "watch_time.h"
 extern "C"
 {
 #include <libavformat/avformat.h>

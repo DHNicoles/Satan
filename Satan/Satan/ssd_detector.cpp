@@ -32,7 +32,7 @@ namespace ice
 	{
 	}
 
-	void Detector::Detect(cv::Mat & frame, std::vector<std::vector<float>>& boxes)
+	void Detector::Detect(cv::Mat & frame, std::vector<std::vector<float> >& boxes)
 	{
 		Blob<float>* input_layer = net_->input_blobs()[0];
 
@@ -148,7 +148,6 @@ namespace ice
 
 	void Detector::Preprocess(const cv::Mat & img, std::vector<cv::Mat>* input_channels)
 	{
-		std::vector<cv::Mat>* input_channels) {
 		/* Convert the input image to the input image format of the network. */
 		cv::Mat sample;
 		if (img.channels() == 3 && num_channels_ == 1)

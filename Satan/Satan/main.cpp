@@ -13,34 +13,38 @@ int main(int argc, char *argv[])
 {
 	if (argc < 1)
 	{
-		std::cout << "you should pass the dircetory path!" << std::endl;
+		LOG(ERROR) << "you should pass the dircetory path!" << std::endl;
 		return -1;
 	}
 
 	ice::KernelAlg alg;
 	std::vector<std::string> file_list;
 	parseOrDie(argv[1], alg, file_list);
-
+	
 	unsigned int frame_count = 0;
 	ice::VideoCapture cap;
 	cv::Mat frame;
-
+	ice::WatchTime T0;
 	for (int i = 0; i < file_list.size(); ++i)
 	{
-		std::cout << file_list[i] << std::endl;
+		LOG(INFO) << "open " <<file_list[i];
 		cap.Open(file_list[i].c_str());
 		if (!cap.isOpened())
 		{
-			std::cout << "VideoCapture initialisze failed." << std::endl;
+			LOG(ERROR) << "VideoCapture initialisze failed." << std::endl;
 		}
 		cap >> frame;
 		while (!frame.empty())
 		{
 			cv::Mat crop_img = frame(cv::Rect(450, 0, 720, 720));
+			T0.Reset();	T0.Start();
 			alg.DetectAndTrack(crop_img);
 			frame_count++;
+			T0.Stop();
+			LOG(INFO) <<"#"<<frame_count<<"\t->\t"<< T0.GetTime();
 			cap >> frame;
 		}
 	}
+	return 0;
 
 }

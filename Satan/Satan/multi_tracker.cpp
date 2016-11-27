@@ -4,7 +4,7 @@
 
 namespace ice
 {
-	MultiTracker::MultiTracker() :
+	MultiTracker::MultiTracker():
 		key_max_(0)
 	{
 		OnInit();
@@ -28,8 +28,7 @@ namespace ice
 			tracker_itr->second = NULL;
 		}
 		//delete object
-		//std::map<size_t, ObjectInfo*> object_info_map_;
-		std::map<size_t, ObjectInfo*>::iterator obj_itr = object_info_map_.begin();
+		std::map<size_t, ObjectInfo*>::iterator obj_itr =  object_info_map_.begin();
 		std::map<size_t, ObjectInfo*>::iterator obj_end_itr = object_info_map_.end();
 		for (; obj_itr != obj_end_itr; ++obj_itr)
 		{

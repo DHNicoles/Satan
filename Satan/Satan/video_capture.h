@@ -39,10 +39,9 @@ namespace ice
 		static int ffmpeg_decoder_init(struct DecoderData *pDat, const char *cFileName);
 		static int ffmpeg_decoder_get_frame(struct DecoderData *pDat, cv::Mat &outImg);
 		static void ffmpeg_decoder_free(struct DecoderData *pDat);
-		static DecoderData *pdat_;
+		DecoderData *pdat_;
 		bool work_well_;
 	};
 
-	
 }
 #endif//__VIDEO_CAPTURE_H__

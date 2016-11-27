@@ -52,7 +52,7 @@ namespace ice
 			int  height = (int)(box.at(3) - box.at(1));
 			cv::rectangle(frame, cv::Rect((int)box.at(0), (int)box.at(1), width, height), cv::Scalar(255, 255, 255), 2, 1, 0);
 		}
-		sprintf(buffer, "/home/lt/cheguangfu/count/Output/detect_%d.jpg", frame_count++);
+		sprintf(buffer, "/home/lt/cheguangfu/workspace/satan/Output/detect_%d.jpg", frame_count++);
 		imwrite(buffer, frame);
 	}
 }

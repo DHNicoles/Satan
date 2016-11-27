@@ -23,7 +23,6 @@ namespace ice
 
 	VideoCapture& VideoCapture::operator >> (cv::Mat & frame)
 	{
-		// TODO: 在此处插入 return 语句
 		if (!pdat_)
 		{
 			//invalid DecoderData * pointor;
@@ -31,6 +30,10 @@ namespace ice
 		else if (0 == ffmpeg_decoder_get_frame(pdat_, frame))
 		{
 			//ffmpeg_decoder_get_frame error;
+		}
+		else
+		{
+			frame = cv::Mat();
 		}
 		return *this;
 	}

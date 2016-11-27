@@ -7,9 +7,10 @@
 #include "util.h"
 
 class KCFTracker;
-class ObjectInfo;
 namespace ice
 {
+	class ObjectInfo;
+
 	class MultiTracker
 	{
 	public:

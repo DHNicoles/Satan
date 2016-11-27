@@ -13,7 +13,7 @@ namespace ice
 		{}
 		~WatchTime() {}
 		void Start() { gettimeofday(&start_time_, 0); }
-		void ReSet() { cost_time_ = 0.0; }
+		void Reset() { cost_time_ = 0.0; }
 		void Stop() { gettimeofday(&end_time_, 0); }
 		double GetTime()
 		{
