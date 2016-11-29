@@ -83,5 +83,8 @@
     <ClInclude Include="object_info.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="counter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

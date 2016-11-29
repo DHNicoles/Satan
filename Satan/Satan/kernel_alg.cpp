@@ -45,7 +45,7 @@ namespace ice
 			multi_trackers_.RemoveInvalid();
 		}
 		T.Stop();
-		LOG(INFO)<<"update trackers\t->\t"<<T.GetTime();
+		LOG(INFO) << "update trackers\t->\t" << T.GetTime();
 
 		if (update_detector)
 		{
@@ -62,15 +62,15 @@ namespace ice
 				int  width = (int)(box.at(2) - box.at(0));
 				int  height = (int)(box.at(3) - box.at(1));
 				obj_boxes[i] = cv::Rect((int)box.at(0), (int)box.at(1), width, height);
-				
+
 			}
 			T.Reset();	T.Start();
 			if (update_trackers)
 			{
-				Match(obj_boxes, scores, frame);	
+				Match(obj_boxes, scores, frame);
 			}
 			T.Stop();
-			LOG(INFO)<<"match boxes\t->\t"<<T.GetTime();
+			LOG(INFO) << "match boxes\t->\t" << T.GetTime();
 			if (DRAW_DETECTOR)
 			{
 				for (size_t i = 0; i < obj_boxes.size(); ++i)
@@ -85,10 +85,10 @@ namespace ice
 				cv::rectangle(frame, cv::Rect(60, 60, 600, 600), cv::Scalar(255, 255, 0), 1, 1, 0);
 			}
 			T.Stop();
-			LOG(INFO)<<"draw trace\t->\t"<<T.GetTime();
+			LOG(INFO) << "draw trace\t->\t" << T.GetTime();
 		}
 		std::string name = std::to_string(frame_count++);
-		std::string pre(7-name.size(),'0');
+		std::string pre(7 - name.size(), '0');
 		name = std::string("/home/lt/cheguangfu/workspace/satan/Output/") + pre + name + ".jpg";
 		//sprintf(buffer, "/home/lt/cheguangfu/workspace/satan/Output/detect_%d.jpg", frame_count++);
 		imwrite(name.c_str(), frame);
@@ -96,6 +96,10 @@ namespace ice
 	void KernelAlg::SetBound(cv::Size size, cv::Rect r)
 	{
 		multi_trackers_.SetBound(size, r);
+	}
+	void KernelAlg::SetCountStrategy(cv::Size size)
+	{
+		Counter::CreateRegionMask(size)
 	}
 	void KernelAlg::Match(std::vector<cv::Rect>& obj_boxes, std::vector<float>& scores, cv::Mat& frame)
 	{
@@ -109,7 +113,7 @@ namespace ice
 			std::map<size_t, ObjectInfo*>::iterator tom_end_it = tracking_obector_map.end();
 			std::map<size_t, ObjectInfo*>::iterator min_it = tom_end_it;
 			int min_dist = 1000000;
-			for (;tom_it != tom_end_it; ++tom_it)
+			for (; tom_it != tom_end_it; ++tom_it)
 			{
 				int dist = Distance(obj_boxes[i], tom_it->second->Position());
 				if (dist < min_dist && dist < DIST_HUMAN)
@@ -134,5 +138,5 @@ namespace ice
 				}
 			}
 		}
-	}	
+	}
 }

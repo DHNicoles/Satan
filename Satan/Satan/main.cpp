@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
 	cv::Rect roi(450, 0, 720, 720);
 	cv::Rect bound(60, 60, 600, 600);
 
-	alg.SetBound(cv::Size(720, 720), bound);
-
+	alg.SetBound(cv::Size(roi.width, roi.height), bound);
+	alg.SetCountStrategy(cv::Size(roi.width, roi.height));
 	unsigned int frame_count = 0;
 	ice::VideoCapture cap;
 	cv::Mat frame;
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		cap.Open(file_list[i].c_str());
 		if (!cap.isOpened())
 		{
-			LOG(ERROR) << "VideoCapture initialisze failed." << std::endl;
+			LOG(ERROR) << "VideoCapture initialize failed." << std::endl;
 		}
 		cap >> frame;
 		while (!frame.empty())

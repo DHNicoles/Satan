@@ -153,6 +153,7 @@
     <ClCompile Include="video_capture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="counter.h" />
     <ClInclude Include="ffttools.hpp" />
     <ClInclude Include="fhog.hpp" />
     <ClInclude Include="kcftracker.hpp" />

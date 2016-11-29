@@ -80,6 +80,7 @@ namespace ice
 		float score_;
 		cv::Rect newest_box_;
 		std::list<cv::Point> trace_;
+		uchar born_region_;
 	};
 }
 

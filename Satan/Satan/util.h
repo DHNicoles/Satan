@@ -21,8 +21,10 @@
 #include <iosfwd>
 #include <memory>
 #include <utility>
+#include <deque>
 #include <glog/logging.h>
 #include "watch_time.h"
+#include "counter.h"
 extern "C"
 {
 #include <libavformat/avformat.h>
@@ -66,7 +68,15 @@ namespace ice
 
 //stop move detection
 #define MIN_FRAME_LAST	20
-#define MIN_MOVE_PIX    15 	
+#define MIN_MOVE_PIX	15 	
+
+/************************************************************************/
+/*    strategy to count the number of human
+	1:| 2:\ 3:-- 4£º/
+*/
+/************************************************************************/
+#define COUNT_STRATEGY 2
+
 
 //draw
 #define DRAW_DETECTOR false

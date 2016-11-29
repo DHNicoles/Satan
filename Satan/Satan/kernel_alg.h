@@ -19,6 +19,7 @@ namespace ice
 		void OnDestroy();
 		void DetectAndTrack(cv::Mat& frame, bool update_trackers = true, bool update_detector = true);
 		void SetBound(cv::Size, cv::Rect);
+		void SetCountStrategy(cv::Size size);
 	private:
 		void Match(std::vector<cv::Rect>& obj_boxes, std::vector<float>& scores, cv::Mat& frame);
 	private:
