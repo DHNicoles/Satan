@@ -32,8 +32,10 @@ namespace ice
 	{
 	}
 
-	void Detector::Detect(cv::Mat & frame, std::vector<std::vector<float> >& boxes)
+	void Detector::Detect(cv::Mat & frame, std::vector<std::vector<float> >& boxes, std::vector<float>& scores)
 	{
+		static WatchTime T1, T2, T3;
+		T1.Reset();	T1.Start();
 		Blob<float>* input_layer = net_->input_blobs()[0];
 
 		input_layer->Reshape(1, num_channels_,
@@ -48,7 +50,9 @@ namespace ice
 		Preprocess(frame, &input_channels);
 
 		net_->Forward();
-
+		T1.Stop();
+		LOG(INFO) << "net Forward\t->\t" << T1.GetTime();
+		T2.Reset();	T2.Start();
 		/* Copy the output layer to a std::vector */
 		Blob<float>* result_blob = net_->output_blobs()[0];
 		const float* result = result_blob->cpu_data();
@@ -68,8 +72,9 @@ namespace ice
 		{
 			std::vector<float> d = detections[i];
 			float score = d[2];
+			scores.push_back(score);
 			int label = static_cast<int>(d[1]);
-			if (score >= 0.3&&label == 1)
+			if (score >= 0.6&&label == 1)
 				//if(score>=0.3 && ( label== 6 ||label ==7  ||label ==15  ))
 			{
 				std::vector<float> box;
@@ -80,6 +85,8 @@ namespace ice
 				boxes.push_back(box);
 			}
 		}
+		T2.Stop();
+		LOG(INFO) << "extract result\t->\t" << T2.GetTime();
 	}
 
 	void Detector::SetMean(const std::string & mean_file, const std::string & mean_value)

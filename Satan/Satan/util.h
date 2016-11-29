@@ -46,5 +46,29 @@ namespace ice
 	/* parse or paramter                                                    */
 	/************************************************************************/
 	void parseOrDie(const char* configPath, KernelAlg& alg, std::vector<std::string>& file_list);
+	int Distance(cv::Rect& r1, cv::Rect& r2);
+	int Distance(cv::Rect& r1, cv::Point& pos);
+	int Distance(cv::Point& pos1, cv::Point& pos2);
 }
 #endif // __UTIL_H__
+
+/************************************************************************/
+/* macro used in this global scope                                      */
+/************************************************************************/
+
+//match distance
+#define	DIST_HUMAN	40
+
+//shit or true human
+#define JUDGE_TIME	7
+#define MIN_MATCH	4
+
+
+//stop move detection
+#define MIN_FRAME_LAST	20
+#define MIN_MOVE_PIX    15 	
+
+//draw
+#define DRAW_DETECTOR false
+
+#define DRAW_TRACKER true 

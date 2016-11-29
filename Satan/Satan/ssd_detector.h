@@ -16,7 +16,7 @@ namespace ice
 		~Detector();
 		void OnInit(const std::string& model_file, const std::string& weights_file, const std::string& mean_file, const std::string& mean_value);
 		void OnDestroy();
-		void Detect(cv::Mat& frame, std::vector<std::vector<float> >& boxes);
+		void Detect(cv::Mat& frame, std::vector<std::vector<float> >& boxes, std::vector<float>& scores);
 	private:
 		void SetMean(const std::string& mean_file, const std::string&mean_value);
 		void WrapInputLayer(std::vector<cv::Mat>* input_channels);

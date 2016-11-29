@@ -54,4 +54,23 @@ namespace ice
 		}
 		LOG(INFO) << "parse success."<< std::endl;
 	}
+	int Distance(cv::Rect & r1, cv::Rect & r2)
+	{
+		int cent_x_1 = r1.x + (r1.width >> 1);
+		int cent_y_1 = r1.y + (r1.height >> 1);
+		int cent_x_2 = r2.x + (r2.width >> 1);
+		int cent_y_2 = r2.y + (r2.height >> 1);
+		return std::abs(cent_x_1 - cent_x_2) + std::abs(cent_y_1 - cent_y_2);
+	}
+	int Distance(cv::Rect & r1, cv::Point & pos)
+	{
+		int cent_x_1 = r1.x + (r1.width >> 1);
+		int cent_y_1 = r1.y + (r1.height >> 1);
+		return std::abs(cent_x_1 - pos.x) + std::abs(cent_y_1 - pos.y);
+	}
+	int Distance(cv::Point & pos1, cv::Point & pos2)
+	{
+		return std::abs(pos1.x - pos2.x) + std::abs(pos1.y - pos2.y);
+	}
 }
+
