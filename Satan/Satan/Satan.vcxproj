@@ -143,17 +143,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="counter.cpp" />
+    <ClCompile Include="detect_behavior.cpp" />
     <ClCompile Include="fhog.cpp" />
     <ClCompile Include="kcftracker.cpp" />
     <ClCompile Include="kernel_alg.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="multi_tracker.cpp" />
+    <ClCompile Include="region.cpp" />
     <ClCompile Include="ssd_detector.cpp" />
     <ClCompile Include="util.cpp" />
     <ClCompile Include="video_capture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="counter.h" />
+    <ClInclude Include="detect_behavior.h" />
     <ClInclude Include="ffttools.hpp" />
     <ClInclude Include="fhog.hpp" />
     <ClInclude Include="kcftracker.hpp" />
@@ -162,6 +166,7 @@
     <ClInclude Include="multi_tracker.h" />
     <ClInclude Include="object_info.h" />
     <ClInclude Include="recttools.hpp" />
+    <ClInclude Include="region.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="ssd_detector.h" />
     <ClInclude Include="tracker.h" />

@@ -39,6 +39,15 @@
     <ClCompile Include="multi_tracker.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="counter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="region.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="detect_behavior.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="util.h">
@@ -84,6 +93,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="counter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="region.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="detect_behavior.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

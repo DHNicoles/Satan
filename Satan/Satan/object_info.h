@@ -11,7 +11,7 @@ namespace ice
 	{
 	public:
 		ObjectInfo(cv::Point point,cv::Rect& box,float score) :
-			trace_(1, point), newest_box_(box), score_(score)
+			trace_(1, point), newest_box_(box), score_(score), counted_(false)
 		{
 			match_success_ = true;
 			true_human_ = false;
@@ -23,6 +23,7 @@ namespace ice
 		cv::Point& Position() { return trace_.back(); }
 		cv::Rect& Box() { return newest_box_; }
 		float& Score() { return score_; }
+		bool& Counted() { return counted_; }
 		void SetMatchFalse() { match_success_ = false; }
 		void SetMatchTrue() { match_success_ = true; }
 		bool IsShit() { return true_shit_; }
@@ -80,7 +81,7 @@ namespace ice
 		float score_;
 		cv::Rect newest_box_;
 		std::list<cv::Point> trace_;
-		uchar born_region_;
+		bool counted_;
 	};
 }
 

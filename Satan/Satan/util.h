@@ -71,14 +71,26 @@ namespace ice
 #define MIN_MOVE_PIX	15 	
 
 /************************************************************************/
-/*    strategy to count the number of human
-	1:| 2:\ 3:-- 4£º/
+/* 
+count area param
 */
 /************************************************************************/
-#define COUNT_STRATEGY 2
+#define ORIGIN_WIDTH 1280
+#define ORIGIN_HIGHT 720
 
+#define TOP_LEFT_X 450
+#define TOP_LEFT_Y 0
+#define WIDTH 720
+#define HIGHT 720
+
+#define BOUND_WIDTH 600
+#define BOUND_HIGHT 600
+
+#define REGION_MIN_MOVE_ONESTEP 30
 
 //draw
 #define DRAW_DETECTOR false
 
 #define DRAW_TRACKER true 
+
+#define DRAW_COUNTER true 
